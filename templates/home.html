@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#4b5d3a","surface-container-high":"#232b31","surface-container-highest":"#2e363c","on-error":"#690005","surface-container-lowest":"#070f14","surface-tint":"#b9cda2","on-tertiary-fixed":"#221b04","surface-container-low":"#151d22","primary":"#b9cda2","on-secondary-fixed-variant":"#7b2f00","on-primary-fixed":"#101f04","on-secondary-fixed":"#351000","error":"#ffb4ab","on-surface":"#dce3eb","on-tertiary-container":"#dccda8","tertiary-fixed-dim":"#d4c5a1","inverse-on-surface":"#2a3137","inverse-primary":"#526440","on-primary-fixed-variant":"#3b4c2b","secondary-fixed-dim":"#ffb694","inverse-surface":"#dce3eb","secondary":"#ffb694","tertiary-container":"#61573a","outline-variant":"#44483f","primary-fixed":"#d4eabc","on-primary-container":"#c0d5a9","tertiary-fixed":"#f1e1bc","surface-container":"#192126","on-error-container":"#ffdad6","on-tertiary-fixed-variant":"#4f462a","on-primary":"#253516","outline":"#8f9287","tertiary":"#d4c5a1","secondary-container":"#ff6a00","secondary-fixed":"#ffdbcc","background":"#0d141a","surface-variant":"#2e363c","on-secondary-container":"#571f00","on-surface-variant":"#c5c8bc","on-tertiary":"#383016","primary-fixed-dim":"#b9cda2","on-background":"#dce3eb","surface":"#0d141a","surface-bright":"#323a40","on-secondary":"#571f00","error-container":"#93000a","surface-dim":"#0d141a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1rem","margin":"1rem","margin-tablet":"1.5rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-desktop":"2.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-desktop":"1.5rem"},fontFamily:{"label-lg":["JetBrains Mono"],"body-md":["Inter"],"headline-md":["Barlow Condensed"],"body-lg":["Inter"],"display-lg-mobile":["Barlow Condensed"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"headline-xl":["Barlow Condensed"],"headline-lg":["Barlow Condensed"],"display-lg":["Barlow Condensed"],"headline-xl-mobile":["Barlow Condensed"],"label-md":["JetBrains Mono"],"headline-sm":["Barlow Condensed"]},fontSize:{"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"24px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"0.06em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.1em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"36px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"28px","letterSpacing":"0.05em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"52px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-xl-mobile":["24px",{"lineHeight":"28px","letterSpacing":"0.05em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"500"}],"headline-sm":["16px",{"lineHeight":"20px","letterSpacing":"0.04em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center p-space-xs bg-surface-container-high"><span class="font-label-md text-label-md text-primary">[ORD]</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider uppercase text-on-surface leading-none">ORDENAPP</span><span class="font-label-sm text-label-sm text-outline tracking-widest leading-none mt-1">CADENA // C2-SYS</span></div></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary border-b-2 border-primary"><a aria-current="page" class="font-label-md uppercase transition-colors py-space-xs text-primary border-b-2 border-primary" data-path="inicio" href="#hero">Inicio</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="funciones" href="#funciones">Funciones</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="jerarquia" href="#jerarquia">Jerarquía</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="como-funciona" href="#como-funciona">Cómo Funciona</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="seguridad" href="#seguridad">Seguridad</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="contacto" href="#contacto">Contacto</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-primary tracking-widest">ACCESO: DEMO</span></div><a class="flex items-center gap-space-xs px-space-md py-space-sm bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-headline-sm text-headline-sm uppercase tracking-wider" data-path="autenticacion-tactica" href="{% url 'login' %}"><span class="material-symbols-outlined text-base">lock</span><span>Iniciar Sesión</span></a><span class="font-label-sm text-label-sm text-primary border border-primary/30 px-2 py-2 hidden sm:inline-flex">DEMO</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="px-4 lg:px-10 py-3 text-xs md:text-sm text-center bg-[#283226] text-[#d4eabc] border-b border-[#4b5d3a]">PROTOTIPO ACADÉMICO · Todos los nombres, comunicaciones y datos son ficticios. Las funciones de seguridad avanzada mostradas son conceptuales.</div><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-lowest overflow-hidden" id="hero">
+<!-- Subtle Tactical Radar/Grid HUD Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#b9cda2_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-0 w-80 h-80 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Column: Hero Copy & Actions -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Militar Badge Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high w-fit shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">[ PROTOTIPO ACADÉMICO // ORDENAPP V1 ]</span>
+<span class="font-label-sm text-label-sm text-outline">| MODO: DEMO</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline-xl text-headline-xl lg:font-display-lg lg:text-display-lg uppercase tracking-wider text-on-surface">
+          COMUNICACIÓN CLARA.<br/>
+<span class="text-primary">CADENA DE MANDO</span> SEGURA.
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Prototipo académico de mensajería institucional con comunicación en tiempo real, roles de usuario y permisos básicos de acceso.
+        </p>
+<!-- Main Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<!-- Primary CTA Button (High-Vis Orange with Chevrons) -->
+<a class="relative group inline-flex items-center gap-space-sm px-space-lg py-space-md bg-secondary-container text-on-secondary-container font-headline-md text-headline-md uppercase tracking-wider hover:bg-secondary-fixed transition-colors shadow-md" href="{% url 'login' %}">
+<span class="material-symbols-outlined text-lg">bolt</span>
+<span>INGRESAR A LA PLATAFORMA</span>
+<span class="font-label-lg text-label-lg tracking-tighter">»»</span>
+</a>
+<!-- Secondary Tactical Contour Button -->
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-md bg-surface-container-high text-tertiary font-headline-md text-headline-md uppercase tracking-wider hover:bg-surface-container-highest transition-colors shadow-sm" href="#como-funciona">
+<span class="material-symbols-outlined text-lg text-tertiary">shield</span>
+<span>VER DEMOSTRACIÓN TÁCTICA</span>
+</a>
+</div>
+<!-- Metric Anchors -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md">
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block mb-0.5">// LATENCIA</span>
+<span class="font-headline-lg text-headline-lg text-primary tracking-wide">EN VIVO</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block mb-0.5">// CIFRADO</span>
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-wide">SESIÓN</span>
+</div>
+<div class="p-space-sm bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-outline block mb-0.5">// TRAZABILIDAD</span>
+<span class="font-headline-lg text-headline-lg text-secondary tracking-wide">HISTORIAL</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Tactical C2 Messaging UI Mockup -->
+<div class="lg:col-span-6 relative flex flex-col">
+<!-- Floating Tactical Alpha Directive Alert -->
+<div class="relative mb-space-sm z-20 flex items-start gap-space-sm p-space-md bg-secondary-container text-on-secondary-container shadow-xl animate-pulse">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider font-bold">¡MENSAJE DE EJEMPLO!</span>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-secondary px-space-xs py-0.5">DEMO</span>
+</div>
+<p class="font-body-sm text-body-sm mt-0.5 font-medium">Mensaje ilustrativo para demostrar el aspecto de la interfaz. No constituye una orden real.</p>
+</div>
+<span class="px-space-sm py-space-xs bg-surface-container-lowest text-on-surface hover:text-secondary font-label-sm text-label-sm uppercase transition-colors shrink-0" title="Elemento ilustrativo: no es una acción real">
+            CONFIRMAR
+          </span>
+</div>
+<!-- C2 Terminal Card Shell -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-xl">
+<!-- Top Terminal Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm bg-surface-container-high px-space-sm py-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">CHAT DE EJEMPLO // DATOS FICTICIOS</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">CANAL: DEMO</span>
+<span class="font-label-sm text-label-sm text-tertiary">ZULU: 14:32:08Z</span>
+</div>
+</div>
+<!-- Channel Context Header -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-base">military_tech</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider block">COMPAÑÍA DE DEMOSTRACIÓN</span>
+<span class="font-label-sm text-label-sm text-outline">NODO DE EJEMPLO // SIN DATOS REALES</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/20 px-space-xs py-space-xs">ACTIVO</span>
+</div>
+<!-- Messages Stream (Rank Hierarchy) -->
+<div class="flex flex-col gap-space-sm p-space-sm bg-surface-container-lowest">
+<!-- Message 1: General de División (Tier 1) -->
+<div class="p-space-sm bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-widest">[★★★★] GRAL. DIVISIÓN // V. SANTOS</span>
+<span class="px-space-xs py-0.2 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase">ESTRATÉGICO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14:28:11Z</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Autorizada Directiva Bravo-4. Ejecutar reconexión del cuadrante Charlie y reportar estado de enlace de las subunidades antes de las 1500Z.
+              </p>
+<div class="flex items-center justify-between pt-space-xs text-outline">
+<span class="font-label-sm text-label-sm flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-xs">done_all</span> Mensaje ficticio
+                </span>
+<span class="font-label-sm text-label-sm text-outline">DEMO</span>
+</div>
+</div>
+<!-- Message 2: Coronel Jefatura (Tier 2) -->
+<div class="p-space-sm bg-surface-container flex flex-col gap-space-xs ml-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-widest">[▲▲▲] CNEL. JEFATURA // M. ARMIJO</span>
+<span class="px-space-xs py-0.2 bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase">TÁCTICO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14:29:45Z</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Comprendido Mando Superior. Transfiriendo orden de patrullaje y bloqueo de frecuencias a las patrullas Bravo-1 y Bravo-2.
+              </p>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span> Ejemplo visual
+                </span>
+</div>
+</div>
+<!-- Message 3: Sargento de Unidad (Tier 3) -->
+<div class="p-space-sm bg-surface-container-high flex flex-col gap-space-xs ml-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-widest">[▲▲] SGTO. OPERATIVO // D. CÁCERES</span>
+<span class="px-space-xs py-0.2 bg-secondary/20 text-secondary font-label-sm text-label-sm uppercase">CAMPO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">14:31:02Z</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Patrulla Bravo-1 en posición. Cuadrante seguro. Acuse de recibo de Directiva Bravo-4 registrado.
+              </p>
+<div class="flex items-center gap-space-xs text-outline pt-space-xs">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span>
+<span class="font-label-sm text-label-sm text-primary">Confirmación ilustrativa</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar -->
+<div class="p-space-sm bg-surface-container-high flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">mic</span>
+<span class="material-symbols-outlined text-base">attach_file</span>
+<span class="material-symbols-outlined text-base">lock</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">[INTERFAZ DE REFERENCIA]</span>
+</div>
+<span class="px-space-md py-space-xs bg-primary text-on-primary font-headline-sm text-headline-sm uppercase tracking-wider hover:bg-primary-fixed transition-colors" title="Elemento ilustrativo: no es una acción real">
+              TRANSMITIR ORDEN
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN: FUNCIONES PRINCIPALES (3 Tarjetas tácticas modulares) -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container" id="funciones">
+<div class="flex flex-col gap-space-lg max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-secondary tracking-widest">// CAPACIDADES_OPERATIVAS</span>
+<span class="font-label-sm text-label-sm text-outline">[SEC_SPEC: 01-03]</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl uppercase tracking-wider text-on-surface">
+            FUNCIONES DE ORDENAPP
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Conoce las funciones del prototipo y las capacidades planeadas para siguientes versiones.
+        </p>
+</div>
+<!-- 3 Modular Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="p-space-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-2xl">swap_calls</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline tracking-widest group-hover:text-primary transition-colors">// MOD_01</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">[ SEGMENTACIÓN ALFA ]</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+                MENSAJERÍA DIRECTA Y POR UNIDAD
+              </h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              El MVP permite mensajes individuales con permisos basados en roles y unidades. Los grupos serán parte de una futura versión.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">RUTEO DIRECTO</span>
+<span class="font-label-sm text-label-sm text-primary">CANAL EXCLUSIVO »</span>
+</div>
+</div>
+<!-- Card 2 (High-Vis Orange Accent) -->
+<div class="p-space-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">radar</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest group-hover:text-secondary-fixed transition-colors">// MOD_02 [PRIORITY]</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">[ DISPARO INMEDIATO ]</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+                NOTIFICACIONES EN TIEMPO REAL
+              </h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              La mensajería WebSocket funciona en tiempo real mientras los usuarios están conectados. Las notificaciones push y los acuses de lectura están planeados.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">ACUSE OBLIGATORIO</span>
+<span class="font-label-sm text-label-sm text-secondary">TELEMETRÍA PUSH »</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col justify-between gap-space-md shadow-md group">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary-container text-on-tertiary-container">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline tracking-widest group-hover:text-tertiary transition-colors">// MOD_03</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">[ REGISTRO FORENSE ]</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+                HISTORIAL DE COMUNICACIONES AUDITABLE
+              </h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Los mensajes se guardan en una base de datos de demostración. La búsqueda avanzada y auditoría se contemplan para futuras fases.
+            </p>
+</div>
+<div class="pt-space-md bg-surface-container-lowest p-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">BITÁCORA ZULU</span>
+<span class="font-label-sm text-label-sm text-tertiary">ACCESO INDEXADO »</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN JERARQUÍA Y PERMISOS ("CADENA DE MANDO Y PERMISOS SEGMENTADOS") -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-lowest relative overflow-hidden" id="jerarquia">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">account_tree</span>
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">// ESTRUCTURA DE MANDO C2</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl lg:font-display-lg lg:text-display-lg uppercase tracking-wider text-on-surface">
+          CADENA DE MANDO Y PERMISOS SEGMENTADOS
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          La jerarquía que se muestra es ilustrativa y no corresponde a una estructura institucional oficial.
+        </p>
+</div>
+<!-- Main Layout: Pyramid / Tree Interactive Display + Security Rail -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Visual Pyramid / Tier Cards (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Level 1 (Cúspide): MANDO SUPERIOR -->
+<div class="p-space-md bg-surface-container-high hover:bg-surface-container-highest transition-colors shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-space-sm bg-tertiary-container text-on-tertiary-container font-headline-md text-headline-md tracking-wider">
+                  ★★★★
+                </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md uppercase text-tertiary tracking-wider">NIVEL 1 // MANDO SUPERIOR</span>
+<span class="font-label-sm text-label-sm bg-tertiary/20 text-tertiary px-space-xs">CLEARANCE: ALFA-MAX</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">ESTADO MAYOR / COMANDANCIA GENERAL</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">EMISIÓN GLOBAL</span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low p-space-sm grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Acceso total y transversal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Directivas estratégicas globales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Auditoría de canal completo</span>
+</div>
+</div>
+<!-- Vertical Connector Line Indicator -->
+<div class="flex justify-center -my-1">
+<span class="font-label-sm text-label-sm text-outline tracking-widest">│ ▼ DIRECTIVA DESCENDENTE │</span>
+</div>
+<!-- Level 2: JEFATURAS -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm ml-0 sm:ml-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-space-sm bg-primary-container text-on-primary font-headline-md text-headline-md tracking-wider">
+                  ▲▲▲
+                </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md uppercase text-primary tracking-wider">NIVEL 2 // JEFATURAS</span>
+<span class="font-label-sm text-label-sm bg-primary/20 text-primary px-space-xs">CLEARANCE: BRAVO</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">COMANDO DE DIVISIÓN Y REGIMIENTOS</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">COORDINACIÓN DIVISIÓN</span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low p-space-sm grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Coordinación táctica sectorial</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Filtrado y despacho de órdenes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Supervisión de unidades adscritas</span>
+</div>
+</div>
+<!-- Vertical Connector Line Indicator -->
+<div class="flex justify-center -my-1">
+<span class="font-label-sm text-label-sm text-outline tracking-widest">│ ▼ DISTRIBUCIÓN OPERATIVA │</span>
+</div>
+<!-- Level 3: UNIDADES -->
+<div class="p-space-md bg-surface-container hover:bg-surface-container-high transition-colors shadow-sm ml-0 sm:ml-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-space-sm bg-surface-container-highest text-secondary font-headline-md text-headline-md tracking-wider">
+                  ▲▲
+                </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md uppercase text-secondary tracking-wider">NIVEL 3 // UNIDADES</span>
+<span class="font-label-sm text-label-sm bg-secondary/20 text-secondary px-space-xs">CLEARANCE: CHARLIE</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">BATALLONES, COMPAÑÍAS Y DESTACAMENTOS</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-widest">DESPLIEGUE CAMPO</span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-low p-space-sm grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Despliegue táctico en terreno</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Reporte de campo a jefatura directa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Mensajería interna de escuadrón</span>
+</div>
+</div>
+<!-- Vertical Connector Line Indicator -->
+<div class="flex justify-center -my-1">
+<span class="font-label-sm text-label-sm text-outline tracking-widest">│ ▼ ASIGNACIÓN INDIVIDUAL │</span>
+</div>
+<!-- Level 4 (Base): PERSONAL -->
+<div class="p-space-md bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm ml-0 sm:ml-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-space-sm bg-surface-container-high text-on-surface font-headline-md text-headline-md tracking-wider">
+                  ▲
+                </div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">NIVEL 4 // PERSONAL</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-outline px-space-xs">CLEARANCE: DELTA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">AGENTES, EFECTIVOS Y ESPECIALISTAS DE LÍNEA</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold tracking-widest">EJECUCIÓN</span>
+</div>
+<div class="mt-space-sm pt-space-xs bg-surface-container-lowest p-space-sm grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Recepción de instrucciones operativas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Confirmación de cumplimiento mandatorio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• Reportes directos según protocolo</span>
+</div>
+</div>
+</div>
+<!-- Security and Permission Explanation Panel (4 Cols) -->
+<div class="lg:col-span-4 p-space-lg bg-surface-container-high flex flex-col gap-space-md shadow-lg sticky top-20">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">// REGLA DE COMPARTIMENTACIÓN</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+            AISLAMIENTO ESTRICTO DE CANALES
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Cada rango sólo visualiza y transmite la información correspondiente a su nivel operativo autorizado. Ningún personal subordinado puede interceptar ni abrir transmisiones del Estado Mayor sin acreditación criptográfica específica.
+          </p>
+<div class="p-space-sm bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">SEGMENTACIÓN DE BUFFER:</span>
+<span class="text-primary font-bold">POR ROLES</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">POLÍTICA DE BYPASS:</span>
+<span class="text-secondary font-bold">DENEGADA POR DEFECTO</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">COMPLIANCE:</span>
+<span class="text-tertiary font-bold">NO CERTIFICADO</span>
+</div>
+</div>
+<div class="p-space-sm bg-secondary-container/15 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base shrink-0">info</span>
+<span class="font-label-sm text-label-sm text-secondary">
+              Los permisos del prototipo deben validarse antes de cualquier uso fuera del entorno académico.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN CÓMO FUNCIONA ("PROTOCOLO OPERATIVO EN 4 PASOS") -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container" id="como-funciona">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Title -->
+<div class="flex flex-col items-center text-center gap-space-xs max-w-2xl mx-auto">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">// SECUENCIA DE TRANSMISIÓN</span>
+<h2 class="font-headline-xl text-headline-xl lg:font-display-lg lg:text-display-lg uppercase tracking-wider text-on-surface">
+          PROTOCOLO OPERATIVO EN 4 PASOS
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Desde la autenticación del operador hasta la salvaguarda judicial de la bitácora: una interfaz clara sobre una arquitectura académica en evolución.
+        </p>
+</div>
+<!-- 4 Connected Sequential Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Paso 01 -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-md shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-primary tracking-wider font-bold">PASO 01</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">fingerprint</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">
+              INICIA SESIÓN CON TU CARGO
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Ingresa con una cuenta de prueba. Los permisos se asignan mediante perfiles configurados en Django.
+            </p>
+</div>
+<div class="p-space-xs bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>PASO SIGUIENTE</span>
+<span class="text-primary">→ 02</span>
+</div>
+</div>
+<!-- Paso 02 -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-md shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-primary tracking-wider font-bold">PASO 02</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">satellite_alt</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">
+              TRANSMITE O RECIBE DIRECTIVAS
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Envía y recibe mensajes de texto en chats individuales autorizados por el prototipo.
+            </p>
+</div>
+<div class="p-space-xs bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>PASO SIGUIENTE</span>
+<span class="text-primary">→ 03</span>
+</div>
+</div>
+<!-- Paso 03 (Highlight Orange) -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-md shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-secondary tracking-wider font-bold">PASO 03</span>
+<span class="material-symbols-outlined text-secondary">notifications_active</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+              RECIBE ALERTAS AL INSTANTE
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Los mensajes llegan en vivo al chat abierto. Las notificaciones push son una función futura.
+            </p>
+</div>
+<div class="p-space-xs bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>PASO SIGUIENTE</span>
+<span class="text-secondary">→ 04</span>
+</div>
+</div>
+<!-- Paso 04 -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-md shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-tertiary tracking-wider font-bold">PASO 04</span>
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors">receipt_long</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">
+              CONSULTA LA BITÁCORA HISTÓRICA
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Consulta mensajes guardados en la base de datos de demostración. No existe aún una bitácora forense.
+            </p>
+</div>
+<div class="p-space-xs bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center justify-between">
+<span>CADENA COMPLETA</span>
+<span class="text-tertiary">✔ ZULU END</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+ SECCIÓN DE SEGURIDAD Y PERMISOS 
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-lowest relative overflow-hidden" id="seguridad">
+<!-- Deep Navy Tactical Background Overlay -->
+<div class="absolute inset-0 bg-surface-container-low opacity-40 pointer-events-none"></div>
+<div class="relative z-10 max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base">encrypted</span>
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">// SEGURIDAD DEL PROTOTIPO</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl uppercase tracking-wider text-on-surface">
+            SEGURIDAD Y PERMISOS
+          </h2>
+</div>
+<div class="px-space-sm py-space-xs bg-surface-container-high flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">CAPACIDADES PLANEADAS // NO CERTIFICADAS</span>
+</div>
+</div>
+<!-- 3 Technical Pillars Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Columna 1: RBAC estricto -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-lg shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm bg-primary-container text-on-primary w-fit">
+<span class="material-symbols-outlined text-2xl">admin_panel_settings</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+              CONTROL DE ACCESO BASADO EN ROLES (RBAC)
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Segmentación granular por rango, escalafón y teatro de operaciones. El servidor aplica reglas de permisos sobre la mensajería de demostración. No debe emplearse con información clasificada.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">POLÍTICA:</span>
+<span class="text-on-surface">MÍNIMO PRIVILEGIO (PoLP)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">ESTADO:</span>
+<span class="text-secondary font-bold">EN DESARROLLO</span>
+</div>
+</div>
+</div>
+<!-- Columna 2: Trazabilidad Total y Sellado de Tiempo -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-lg shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm bg-surface-container-highest text-secondary w-fit">
+<span class="material-symbols-outlined text-2xl">lock_clock</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+              TRAZABILIDAD TOTAL Y SELLADO DE TIEMPO
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Timestamping criptográfico inmutable en cada orden, lectura y confirmación de acuse. Ninguna acción ocurre fuera del registro cronológico atómico de alta precisión militar (UTC/ZULU).
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">PRECISIÓN CRONO:</span>
+<span class="text-on-surface">MICROSEGUNDOS (NTP ATÓMICO)</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">FIRMA DIGITAL:</span>
+<span class="text-primary font-bold">ED25519 POR DISPOSITIVO</span>
+</div>
+</div>
+</div>
+<!-- Columna 3: Auditoría y Bitácora Militar -->
+<div class="p-space-lg bg-surface-container-low flex flex-col justify-between gap-space-lg shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm bg-tertiary-container text-on-tertiary-container w-fit">
+<span class="material-symbols-outlined text-2xl">policy</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wider">
+              REGISTRO DE AUDITORÍA Y BITÁCORA MILITAR
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Logs de eventos no modificables basados en estructuras WORM (Write Once, Read Many). Todo intento de acceso indebido genera disparos telemétricos hacia la mesa de contrainteligencia.
+            </p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">INTEGRIDAD:</span>
+<span class="text-on-surface">CADENA HASH INMUTABLE</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline">VALOR PROBATORIO:</span>
+<span class="text-tertiary font-bold">10— PERICIAL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real Operational Context Showcase -->
+<div class="p-space-md bg-surface-container-high grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop items-center">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">// DEFENSA DE INFRAESTRUCTURA CRÍTICA</span>
+<h4 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider">
+            DESPLIEGUE EN SERVIDORES PROPIOS O NUBE CLASIFICADA
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Disponible para despliegue On-Premise dentro del perímetro físico de cuarteles, ministerios y fuerzas de seguridad, con aislamiento total de la red pública e independencia de satélites comerciales.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm justify-end">
+<div class="p-space-sm bg-surface-container-low text-center">
+<span class="font-headline-lg text-headline-lg text-primary block">—</span>
+<span class="font-label-sm text-label-sm text-outline">SIN MEDICIÓN</span>
+</div>
+<div class="p-space-sm bg-surface-container-low text-center">
+<span class="font-headline-lg text-headline-lg text-secondary block">PENDIENTE</span>
+<span class="font-label-sm text-label-sm text-outline">POR EVALUAR</span>
+</div>
+<div class="p-space-sm bg-surface-container-low text-center">
+<span class="font-headline-lg text-headline-lg text-tertiary block">LOCAL</span>
+<span class="font-label-sm text-label-sm text-outline">ENTORNO DEMO</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BANDA DE LLAMADO A LA ACCIÓN (CTA TÁCTICO) -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl bg-surface-container-lowest overflow-hidden" id="contacto">
+<!-- Angular Military HUD Aesthetic Accents -->
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/20 via-surface-container to-surface-container-low pointer-events-none"></div>
+<div class="relative z-10 max-w-5xl mx-auto p-space-xl bg-surface-container flex flex-col items-center text-center gap-space-lg shadow-xl">
+<!-- Top Tag -->
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-lowest">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">DISPOSICIÓN INMEDIATA // ACTIVACIÓN TÁCTICA</span>
+</div>
+<!-- Main Headline -->
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-xl text-headline-xl lg:font-display-lg lg:text-display-lg uppercase tracking-wider text-on-surface">
+          EXPERIMENTA LA EFICIENCIA DE LA CADENA DE MANDO DIGITAL
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          Descubre cómo Ordenapp facilita la demostración de comunicación jerárquica en tu organización institucional o de defensa.
+        </p>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-space-md w-full pt-space-xs">
+<!-- High-Vis Orange CTA -->
+<a class="inline-flex items-center gap-space-sm px-space-xl py-space-md bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed transition-colors font-headline-md text-headline-md uppercase tracking-wider shadow-lg" href="{% url 'login' %}">
+<span class="material-symbols-outlined text-xl">shield_locked</span>
+<span>ACCEDE A LA DEMOSTRACIÓN TÁCTICA AHORA</span>
+<span class="font-label-lg text-label-lg">»</span>
+</a>
+<!-- Secondary Button -->
+
+</div>
+<!-- Footer Telemetry Strip inside CTA Box -->
+<div class="pt-space-md w-full grid grid-cols-2 md:grid-cols-4 gap-space-sm bg-surface-container-lowest p-space-sm">
+<div class="flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-outline">SIN HOMOLOGACIÓN</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">security</span>
+<span class="font-label-sm text-label-sm text-outline">SIN E2EE</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary">flash_on</span>
+<span class="font-label-sm text-label-sm text-outline">RESPUESTA INMEDIATA</span>
+</div>
+<div class="flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-tertiary">cloud_off</span>
+<span class="font-label-sm text-label-sm text-outline">NO IMPLEMENTADO</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="p-space-xs bg-surface-container-high"><span class="font-label-md text-label-md text-primary">[ORD]</span></div><span class="font-headline-lg text-headline-lg uppercase tracking-wider text-on-surface">ORDENAPP</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Plataforma de comunicación táctica institucional estructurada bajo principios de mando y control jerárquico inquebrantable.</p><div class="p-space-sm bg-surface-container-low max-w-sm"><span class="font-label-sm text-label-sm text-primary block mb-1">// DISPOSICIÓN OFICIAL</span><p class="font-label-sm text-label-sm text-outline uppercase">PROTOTIPO ACADÉMICO · DATOS FICTICIOS</p></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary">// VECTORES_ACCESO</span><div class="flex flex-col gap-space-xs font-body-md text-body-md"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#hero">Inicio</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#funciones">Funciones Operativas</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#jerarquia">Árbol Jerárquico</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#como-funciona">Protocolo de Transmisión</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#seguridad">Criptografía y Blindaje</a></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary">// PROTOCOLOS</span><div class="flex flex-col gap-space-xs font-body-md text-body-md"><span class="text-on-surface-variant">C2 Interfaz</span><span class="text-on-surface-variant">Directivas Alpha</span><span class="text-on-surface-variant">Canales Cifrados</span><span class="text-on-surface-variant">Auditoría Zulu</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary">// TELEMETRÍA Y SOPORTE</span><div class="flex flex-col gap-space-xs font-label-md text-label-md text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-outline">terminal</span><span>CANAL: SEC-COMMS-09</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-outline">shield</span><span>ESTADO: PROTOTIPO</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-sm text-outline">schedule</span><span>TIMESTAMP: UTC/ZULU</span></div></div><div class="mt-space-sm p-space-sm bg-surface-container-high"><span class="font-label-sm text-label-sm text-secondary block">ALERTA OPERACIONAL</span><span class="font-body-sm text-body-sm text-on-surface-variant">Solo iniciar sesión con cuentas ficticias de demostración.</span></div></div></div><div class="pt-space-md bg-surface-container-low px-space-md py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">© 2026 ORDENAPP // PROYECTO ACADÉMICO DE DEMOSTRACIÓN.</span><div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline uppercase"><span class="hover:text-primary transition-colors">Privacidad Clasificada</span><span class="hover:text-primary transition-colors">Términos de Despliegue</span><span class="hover:text-primary transition-colors">Custodia de Datos</span></div></div></div></footer></body></html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Detalle de comunicado{% endblock %}
+{% block content %}
+<div class="page-eyebrow">// CENTRO DE COMUNICADOS / DETALLE</div>
+<div class="page-heading"><div><h1>DETALLE <span>DEL COMUNICADO</span></h1><p>{{ bulletin.unit.name }} · {{ bulletin.created_at|date:'d/m/Y H:i' }}</p></div><a class="button-secondary" href="{% url 'bulletin_list' %}">← TODOS</a></div>
+{% for msg in messages %}<div class="bulletin-alert" role="status">{{ msg }}</div>{% endfor %}
+<article class="bulletin-detail"><div class="micro-label">// {{ bulletin.get_priority_display|upper }} / {{ bulletin.sender.username|upper }}</div><h2>{{ bulletin.title }}</h2><div class="bulletin-body">{{ bulletin.body|linebreaks }}</div></article>
+{% if receipt %}<section class="panel bulletin-confirm"><div class="panel-head"><h2>MI RECEPCIÓN</h2></div><p>Leído: {{ receipt.read_at|date:'d/m/Y H:i'|default:'Pendiente' }}</p>{% if receipt.confirmed_at %}<p class="bulletin-state">✓ Confirmado el {{ receipt.confirmed_at|date:'d/m/Y H:i' }}</p>{% else %}<form method="post" action="{% url 'bulletin_confirm' bulletin.pk %}">{% csrf_token %}<button class="action-primary" type="submit">CONFIRMAR RECEPCIÓN »</button></form>{% endif %}</section>{% endif %}
+{% if is_sender %}
+<section class="panel bulletin-confirm">
+  <div class="panel-head"><div><div class="micro-label">// CONTROL DE RECEPCIÓN</div><h2>SEGUIMIENTO DE DESTINATARIOS</h2></div></div>
+  <p>Consulta las lecturas, confirmaciones y destinatarios pendientes del comunicado.</p>
+  <a class="action-primary" href="{% url 'bulletin_tracking' bulletin.pk %}">VER SEGUIMIENTO COMPLETO »</a>
+</section>
+{% endif %}
+{% endblock %}

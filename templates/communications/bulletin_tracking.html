@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Seguimiento de comunicado{% endblock %}
+{% block content %}
+<div class="page-eyebrow">// CENTRO DE COMUNICADOS / MONITOREO DE RECEPCIÓN</div>
+<div class="page-heading">
+  <div><h1>SEGUIMIENTO <span>DE COMUNICADO</span></h1>
+  <p>{{ bulletin.title }} · {{ bulletin.unit.name }} · {{ bulletin.created_at|date:'d/m/Y H:i' }}</p></div>
+  <a class="button-secondary" href="{% url 'bulletin_detail' bulletin.pk %}">← VER COMUNICADO</a>
+</div>
+<section class="tracking-summary" aria-label="Indicadores de seguimiento">
+  <div class="tracking-metric"><div class="micro-label">// 01 DESTINATARIOS</div><strong>{{ counts.total }}</strong><small>Asignados al momento del envío</small></div>
+  <div class="tracking-metric"><div class="micro-label">// 02 PENDIENTES DE LECTURA</div><strong>{{ counts.pending }}</strong><small>No han abierto el comunicado</small></div>
+  <div class="tracking-metric"><div class="micro-label">// 03 LEÍDOS SIN CONFIRMAR</div><strong>{{ counts.read_only }}</strong><small>Abiertos, sin acuse explícito</small></div>
+  <div class="tracking-metric confirmed"><div class="micro-label">// 04 CONFIRMADOS</div><strong>{{ counts.confirmed }}</strong><small>Acuse de recepción registrado</small></div>
+</section>
+<section class="panel tracking-panel">
+ <div class="panel-head"><div><div class="micro-label">// RESULTADOS / COBERTURA</div><h2>AVANCE DE RECEPCIÓN</h2></div><span class="tracking-percent">{{ counts.confirmed_percent }}% CONFIRMADO</span></div>
+ <div class="tracking-progress-area">
+  <div class="tracking-progress-label"><span>Lectura registrada: {{ counts.read_total }} / {{ counts.total }}</span><span>{{ counts.read_percent }}%</span></div>
+  <div class="tracking-track"><div class="tracking-fill read" style="width:{{ counts.read_percent }}%"></div></div>
+  <div class="tracking-progress-label"><span>Confirmación explícita: {{ counts.confirmed }} / {{ counts.total }}</span><span>{{ counts.confirmed_percent }}%</span></div>
+  <div class="tracking-track"><div class="tracking-fill confirm" style="width:{{ counts.confirmed_percent }}%"></div></div>
+  <p class="tracking-help">Los contadores se calculan a partir de las lecturas y confirmaciones registradas. Un mensaje enviado no implica que haya sido abierto.</p>
+ </div>
+</section>
+<section class="panel tracking-panel">
+ <div class="panel-head tracking-head"><div><div class="micro-label">// REGISTRO DE DESTINATARIOS</div><h2>ESTADO POR USUARIO</h2></div><div class="tracking-actions"><a class="button-secondary" href="{% url 'bulletin_tracking_csv' bulletin.pk %}">↓ EXPORTAR CSV</a><a class="button-secondary" href="{% url 'bulletin_tracking' bulletin.pk %}?estado={{ state }}">↻ ACTUALIZAR</a></div></div>
+ <nav class="tracking-filters" aria-label="Filtrar por estado">
+ <a class="{% if state == 'all' %}selected{% endif %}" href="?estado=all">TODOS ({{ counts.total }})</a>
+ <a class="{% if state == 'pending' %}selected{% endif %}" href="?estado=pending">SIN LEER ({{ counts.pending }})</a>
+ <a class="{% if state == 'read' %}selected{% endif %}" href="?estado=read">LEÍDOS ({{ counts.read_only }})</a>
+ <a class="{% if state == 'confirmed' %}selected{% endif %}" href="?estado=confirmed">CONFIRMADOS ({{ counts.confirmed }})</a>
+ </nav>
+ <div class="tracking-scroll"><table class="tracking-table">
+ <thead><tr><th>USUARIO</th><th>CARGO / UNIDAD</th><th>ESTADO</th><th>FECHA DE LECTURA</th><th>FECHA DE CONFIRMACIÓN</th></tr></thead>
+ <tbody>{% for r in receipts %}<tr><td><strong>{{ r.recipient.username }}</strong></td><td>{% if r.recipient.profile %}{{ r.recipient.profile.get_role_display }}<br><small>{{ r.recipient.profile.unit.name }}</small>{% else %}Sin perfil{% endif %}</td><td>{% if r.confirmed_at %}<span class="tracking-tag ok">✓ CONFIRMADO</span>{% elif r.read_at %}<span class="tracking-tag read">◉ LEÍDO</span>{% else %}<span class="tracking-tag pending">○ SIN LEER</span>{% endif %}</td><td>{{ r.read_at|date:'d/m/Y H:i'|default:'—' }}</td><td>{{ r.confirmed_at|date:'d/m/Y H:i'|default:'—' }}</td></tr>
+ {% empty %}<tr><td colspan="5" class="tracking-empty">No hay destinatarios en este estado.</td></tr>{% endfor %}</tbody>
+ </table></div><div class="tracking-foot">{{ visible_count }} resultado{{ visible_count|pluralize }} · Datos ficticios de demostración</div>
+</section>
+{% endblock %}

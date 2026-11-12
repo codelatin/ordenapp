@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Jerarquía institucional{% endblock %}
+{% block content %}
+<div class="page-eyebrow">// EMSUB / ORGANIZACIÓN FICTICIA</div>
+<div class="page-heading"><div><h1>ESTRUCTURA <span>JERÁRQUICA</span></h1><p>Roles, dependencias y permisos de demostración; no representan reglas oficiales de la institución.</p></div><a class="button-secondary" href="{% url 'dashboard' %}">← PANEL</a></div>
+<div class="panel" style="padding:24px;margin-bottom:22px"><div class="micro-label">// IDENTIDAD ACTIVA</div><h2>{{ user.profile.get_role_display|upper }}</h2><p>{{ user.profile.unit.name }}</p>
+<p>{% if can_publish %}Puedes publicar comunicados a las unidades que aparecen a continuación:{% else %}Puedes recibir y confirmar comunicados dirigidos a tu unidad.{% endif %}</p>
+{% if can_publish %}<div class="org-tags">{% for u in my_publish_units %}<span>{{ u.name }}</span>{% empty %}<span>No hay compañías disponibles</span>{% endfor %}</div>{% endif %}</div>
+<div class="dashboard-columns"><section class="panel"><div class="panel-head"><div><div class="micro-label">// UNIDADES / 001</div><h2>ORGANIGRAMA DE DEMOSTRACIÓN</h2></div></div><div class="org-list">
+{% for unit in units %}<div class="org-item"><strong>{{ unit.name }}</strong><small>{{ unit.get_kind_display }}{% if unit.parent %} · Depende de: {{ unit.parent.name }}{% endif %}</small></div>{% empty %}<p>Ejecuta <code>python manage.py seed_demo</code> para crear las unidades.</p>{% endfor %}
+</div></section><section class="panel"><div class="panel-head"><div><div class="micro-label">// PERSONAL / 002</div><h2>USUARIOS DE PRUEBA</h2></div></div><div class="org-list">
+{% for member in members %}<div class="org-item"><strong>{{ member.username }}</strong><small>{{ member.profile.get_role_display }} · {{ member.profile.unit.name }}</small>
+{% if member.pk in allowed_contact_ids %}<a href="{% url 'chat' member.pk %}">INICIAR MENSAJE ↗</a>{% endif %}</div>{% endfor %}</div></section></div>
+<div class="dashboard-footnote" style="margin-top:24px"><span class="material-symbols-outlined">info</span><span>Los permisos se verifican nuevamente en las vistas y al enviar mensajes WebSocket. Ver un usuario en este listado no otorga acceso a su conversación.</span></div>
+{% endblock %}

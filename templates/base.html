@@ -1,0 +1,21 @@
+{% load static %}<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}OrdenApp{% endblock %} · Prototipo académico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="{% static 'css/app.css' %}" rel="stylesheet">{% block extra_head %}{% endblock %}</head>
+<body class="app-body">
+<header class="topbar"><a href="{% url 'home' %}" class="brand"><span class="brand-mark">[ORD]</span><span><strong>ORDENAPP</strong><small>CADENA // C2-SYS</small></span></a>
+<div class="top-actions"><span class="demo-label">● ENTORNO DE DEMOSTRACIÓN</span>{% if user.is_authenticated %}<div class="notification-control" id="notification-control">
+<button type="button" class="notification-bell" id="notification-bell" aria-expanded="false" aria-controls="notification-panel" aria-label="Abrir notificaciones"><span class="material-symbols-outlined">notifications</span><span id="notification-badge" class="notification-badge" hidden>0</span></button>
+<div class="notification-panel" id="notification-panel" hidden><div class="notification-panel-heading"><strong>// COMUNICADOS RECIENTES</strong><span id="notification-connection" aria-live="polite">CONECTANDO</span></div><p id="notification-summary" class="notification-summary">Consultando pendientes...</p><div id="notification-items" class="notification-items"></div><a class="notification-all" href="{% url 'bulletin_list' %}">VER TODOS LOS COMUNICADOS ↗</a></div>
+</div><span class="account-label">{{ user.username }}</span><form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="logout-btn" type="submit">SALIR ↗</button></form>{% else %}<a class="button-secondary" href="{% url 'login' %}">INGRESAR</a>{% endif %}</div></header>
+{% if user.is_authenticated %}<div class="app-layout"><aside class="sidebar" aria-label="Navegación principal"><div class="side-eyebrow">// CENTRO DE CONTROL</div><a class="side-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'dashboard' %}"><span class="material-symbols-outlined">dashboard</span>Panel principal</a><a class="side-link {% if request.resolver_match.url_name == 'inbox' or request.resolver_match.url_name == 'chat' %}active{% endif %}" href="{% url 'inbox' %}"><span class="material-symbols-outlined">forum</span>Comunicaciones</a><a class="side-link {% if request.resolver_match.url_name == 'bulletin_list' or request.resolver_match.url_name == 'bulletin_detail' or request.resolver_match.url_name == 'bulletin_create' %}active{% endif %}" href="{% url 'bulletin_list' %}"><span class="material-symbols-outlined">campaign</span>Comunicados</a><a class="side-link {% if request.resolver_match.url_name == 'hierarchy' %}active{% endif %}" href="{% url 'hierarchy' %}"><span class="material-symbols-outlined">account_tree</span>Jerarquía</a><a class="side-link" href="{% url 'home' %}"><span class="material-symbols-outlined">home</span>Inicio público</a>{% if user.is_staff %}<a class="side-link" href="{% url 'admin:index' %}"><span class="material-symbols-outlined">admin_panel_settings</span>Administración</a>{% endif %}<div class="side-foot"><span class="radar-dot"></span> CANAL DE PRUEBA<br><small>Datos exclusivamente ficticios</small></div></aside><main class="content-area">
+{% else %}<main class="public-content">{% endif %}
+{% block content %}{% endblock %}
+</main>{% if user.is_authenticated %}</div>{% endif %}
+{% if user.is_authenticated %}
+<div id="global-bulletin-toast" class="bulletin-toast" role="status" aria-live="polite" hidden></div>
+<script src="{% static 'js/notifications.js' %}" defer></script>
+{% endif %}
+</body></html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Panel de control{% endblock %}
+{% block content %}
+<div class="page-eyebrow">// SISTEMA DE COMUNICACIONES <span class="muted">/ PANEL PRINCIPAL</span></div>
+<div class="page-heading"><div><h1>CENTRO DE <span>CONTROL</span></h1><p>Bienvenido, <strong>{{ user.username }}</strong>. Vista personalizada de tu actividad académica.</p></div><a class="action-primary" href="{% url 'inbox' %}"><span class="material-symbols-outlined">send</span> ABRIR MENSAJERÍA <span>»</span></a></div>
+<div class="identity-strip"><div class="id-icon"><span class="material-symbols-outlined">military_tech</span></div><div><div class="micro-label">// IDENTIDAD AUTENTICADA</div><strong>{{ user.username|upper }}</strong><div class="identity-sub">{% if profile %}{{ profile.get_role_display }} · {{ profile.unit.name }}{% else %}Perfil pendiente de configuración{% endif %}</div></div><span class="identity-status">● SESIÓN ACTIVA</span></div>
+<section class="metric-grid" aria-label="Resumen de actividad">
+<div class="metric-card"><div class="metric-label">// 01 MENSAJES RECIBIDOS <span class="material-symbols-outlined">inbox</span></div><div class="metric-value">{{ received_count|stringformat:'02d' }}</div><div class="metric-footer">Almacenados en tu bandeja</div></div>
+<div class="metric-card urgent"><div class="metric-label">// 02 SIN LEER <span class="material-symbols-outlined">notifications_active</span></div><div class="metric-value">{{ unread_count|stringformat:'02d' }}</div><div class="metric-footer">Pendientes de abrir</div></div>
+<div class="metric-card"><div class="metric-label">// 03 ENVIADOS <span class="material-symbols-outlined">outgoing_mail</span></div><div class="metric-value">{{ sent_count|stringformat:'02d' }}</div><div class="metric-footer">Comunicaciones emitidas</div></div>
+<div class="metric-card"><div class="metric-label">// 04 CONTACTOS <span class="material-symbols-outlined">groups</span></div><div class="metric-value">{{ contacts_count|stringformat:'02d' }}</div><div class="metric-footer">Contactos autorizados del MVP</div></div>
+</section>
+
+<section class="notification-dashboard" aria-label="Comunicados en tiempo real">
+<div class="panel-head"><div><div class="micro-label">// EVENTOS / COMUNICADOS</div><h2>NOTIFICACIONES EN TIEMPO REAL</h2></div><span id="dash-live-status" class="tiny-status">● CONECTANDO</span></div>
+<div class="notification-dashboard-grid">
+<div class="notice-stat"><span>// PENDIENTES DE LEER</span><strong id="dash-unread-bulletins">—</strong><small>Comunicados no abiertos</small></div>
+<div class="notice-stat"><span>// POR CONFIRMAR</span><strong id="dash-pending-confirm">—</strong><small>Recibidos sin acuse explícito</small></div>
+<div class="notice-stat"><span>// ACUSES PENDIENTES</span><strong id="dash-pending-recipients">—</strong><small>Destinatarios de tus publicaciones pendientes</small></div>
+</div>
+<div class="notification-dashboard-list" id="dashboard-notification-list"><p>Consultando tus comunicados...</p></div>
+</section>
+
+<div class="dashboard-columns"><section class="panel"><div class="panel-head"><div><div class="micro-label">// FEED / 001</div><h2>ACTIVIDAD RECIENTE</h2></div><a href="{% url 'inbox' %}">VER CONTACTOS ↗</a></div><div class="panel-list">
+{% for msg in recent_messages %}<div class="feed-item"><span class="feed-icon {% if msg.recipient_id == user.pk %}incoming{% endif %}"><span class="material-symbols-outlined">{% if msg.recipient_id == user.pk %}south_west{% else %}north_east{% endif %}</span></span><div class="feed-detail"><div class="feed-title">{% if msg.recipient_id == user.pk %}De {{ msg.sender.username }}{% else %}Para {{ msg.recipient.username }}{% endif %}<span class="time-stamp">{{ msg.created_at|date:'d/m/Y H:i' }}</span></div><div class="feed-preview">{{ msg.body|truncatechars:110 }}</div><div class="micro-label">{% if msg.recipient_id == user.pk %}ENTRANTE{% else %}SALIENTE{% endif %}</div></div></div>
+{% empty %}<div class="empty-state"><span class="material-symbols-outlined">mark_chat_unread</span><h3>SIN COMUNICACIONES TODAVÍA</h3><p>Abre la mensajería y envía el primer mensaje de prueba.</p></div>{% endfor %}
+</div></section>
+<section class="panel"><div class="panel-head"><div><div class="micro-label">// RED / 002</div><h2>ENLACES DISPONIBLES</h2></div><span class="tiny-status">● PERMISOS ACTIVOS</span></div><div class="contacts-list">{% for contact in contacts %}<a class="contact-row" href="{% url 'chat' contact.pk %}"><span class="contact-avatar">{{ contact.username|slice:':2'|upper }}</span><span class="contact-data"><strong>{{ contact.username }}</strong><small>{{ contact.profile.get_role_display }} · {{ contact.profile.unit.name }}</small></span><span class="material-symbols-outlined">chevron_right</span></a>{% empty %}<div class="empty-state"><span class="material-symbols-outlined">person_off</span><p>No hay contactos habilitados para esta cuenta.</p></div>{% endfor %}</div><a class="panel-bottom-link" href="{% url 'inbox' %}">ABRIR TODOS LOS CONTACTOS <span>↗</span></a></section></div>
+<p style="margin:24px 0"><a class="action-primary" href="{% url 'bulletin_list' %}"><span class="material-symbols-outlined">campaign</span> VER COMUNICADOS »</a></p>
+<div class="dashboard-footnote"><span class="material-symbols-outlined">info</span><span><strong>PROTOTIPO ACADÉMICO.</strong> Cifrado especializado, notificaciones con el navegador cerrado y auditoría inmutable no están implementados. Las cifras muestran datos reales de esta instalación de prueba.</span></div>
+{% endblock %}

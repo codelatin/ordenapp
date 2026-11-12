@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Nuevo comunicado{% endblock %}
+{% block content %}
+<div class="page-eyebrow">// MÓDULO DE COMUNICACIONES / EMISIÓN CONTROLADA</div>
+<div class="page-heading"><div><h1>NUEVO <span>COMUNICADO</span></h1><p>El sistema comprueba la unidad asignada antes de enviar.</p></div><a class="button-secondary" href="{% url 'bulletin_list' %}">← VOLVER</a></div>
+<div class="bulletin-form-wrap">
+{% for error in errors %}<div class="bulletin-error" role="alert">{{ error }}</div>{% endfor %}
+<form method="post" class="bulletin-form">{% csrf_token %}
+<label for="id_unit">UNIDAD DESTINATARIA</label><select required name="unit" id="id_unit"><option value="">Selecciona una unidad</option>{% for u in units %}<option value="{{ u.pk }}" {% if values.unit == u.pk|stringformat:'s' %}selected{% endif %}>{{ u.name }}</option>{% endfor %}</select>
+<label for="id_title">ASUNTO</label><input required maxlength="160" name="title" id="id_title" value="{{ values.title|default:'' }}" placeholder="Ej. Reunión de orientación académica">
+<label for="id_priority">PRIORIDAD</label><select name="priority" id="id_priority"><option value="normal">Normal</option><option value="high" {% if values.priority == 'high' %}selected{% endif %}>Alta</option></select>
+<label for="id_body">CONTENIDO</label><textarea required maxlength="4000" name="body" id="id_body" rows="8" placeholder="Escribe el comunicado de prueba...">{{ values.body|default:'' }}</textarea>
+<p class="form-note">Se creará un destinatario individual por cada cuenta activa de la unidad, excepto el emisor. No uses información real ni sensible.</p>
+<button class="action-primary" type="submit">PUBLICAR COMUNICADO »</button></form></div>
+{% endblock %}
